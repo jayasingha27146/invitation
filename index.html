@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Lakmal & Hasini - Wedding Invitation</title>
+    <meta name="description" content="Join us to celebrate our special day" />
+    <link rel="stylesheet" href="Styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @media (max-width: 768px) {
+        #mobile-view-image {
+          display: block;
+          margin: 20px auto;
+          max-width: 100%;
+        }
+      }
+      @media (min-width: 769px) {
+        #mobile-view-image {
+          display: none;
+        }
+      }
+
+      body {
+        font-size: 20px; /* Base font size */
+      }
+
+      h1 {
+        font-size: 3rem; /* Enhance main headings */
+      }
+
+      h2 {
+        font-size: 2.5rem; /* Enhance section titles */
+      }
+
+      h3 {
+        font-size: 2 rem; /* Enhance smaller headings */
+      }
+
+      p,
+      a,
+      button {
+        font-size: 1.25rem; /* Enhance paragraph and link text */
+      }
+
+      .nav-link {
+        font-size: 1rem; /* Adjust navigation link size */
+      }
+
+      .glow-button {
+        font-size: 1.125rem; /* Enhance button text */
+      }
+    </style>
+  </head>
+  <body class="scroll-smooth">
+    <main class="min-h-screen bg-gradient">
+      <!-- Navigation -->
+      <nav id="navbar" class="fixed w-full z-50 transition-all">
+        <div class="container">
+          <div class="nav-content">
+            <a href="#hero" class="logo">Lakmal & Hasini</a>
+
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav">
+              <a href="#hero" class="nav-link">Home</a>
+              <a href="#our-story" class="nav-link">Our Story</a>
+              <a href="#schedule" class="nav-link">Schedule</a>
+              <a href="#location" class="nav-link">Location</a>
+              <a href="#gallery" class="nav-link">Gallery</a>
+              <a href="#rsvp" class="nav-link">RSVP</a>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-toggle" id="mobile-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav hidden" id="mobile-nav">
+          <div class="container">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#our-story" class="nav-link">Our Story</a>
+            <a href="#schedule" class="nav-link">Schedule</a>
+            <a href="#location" class="nav-link">Location</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#rsvp" class="nav-link">RSVP</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Floating Hearts Animation -->
+      <div id="floating-hearts" class="floating-hearts-container"></div>
+
+      <!-- Music Player -->
+      <button id="music-toggle" class="music-toggle">
+        <i class="fas fa-music"></i>
+      </button>
+      <audio id="background-music" loop>
+        <source src="Awakening-Dew(chosic.com).mp3" type="audio/mpeg" />
+      </audio>
+
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-slides">
+          <div class="hero-slide active">
+            <div
+              class="hero-image"
+              style="background-image: url('https://placehold.co/1920x1080')"
+            ></div>
+            <div class="hero-gradient"></div>
+          </div>
+          <div class="hero-slide">
+            <div
+              class="hero-image"
+              style="background-image: url('https://placehold.co/1920x1080')"
+            ></div>
+            <div class="hero-gradient"></div>
+          </div>
+          <div class="hero-slide">
+            <div
+              class="hero-image"
+              style="background-image: url('https://placehold.co/1920x1080')"
+            ></div>
+            <div class="hero-gradient"></div>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <h1 class="hero-title fade-in">Lakmal & Hasini</h1>
+          <p class="hero-date fade-in">May 30, 2025 • Hotel Grand Guardian</p>
+          <div class="hero-buttons fade-in">
+            <a href="#rsvp" class="glow-button">RSVP Now</a>
+          </div>
+        </div>
+
+        <div class="hero-dots">
+          <button class="hero-dot active" data-index="0"></button>
+          <button class="hero-dot" data-index="1"></button>
+          <button class="hero-dot" data-index="2"></button>
+        </div>
+      </section>
+
+      <!-- Our Story Section -->
+      <section id="our-story" class="section bg-white">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Our Story</h2>
+
+          <div class="story-grid">
+            <div class="story-image animate-on-scroll">
+              <img
+                src="https://placehold.co/600x600"
+                alt="Sarah and Michael"
+                class="rounded-image"
+              />
+            </div>
+
+            <div class="story-content">
+              <div class="timeline-item animate-on-scroll">
+                <h3 class="timeline-title">How We Met</h3>
+                <p class="timeline-text">
+                  We first crossed paths at a mutual friend's birthday party in
+                  the summer of 2020. What started as casual conversation over
+                  shared interests in photography and hiking quickly blossomed
+                  into something more.
+                </p>
+              </div>
+
+              <div class="timeline-item animate-on-scroll">
+                <h3 class="timeline-title">First Date</h3>
+                <p class="timeline-text">
+                  Our first date was at a quaint little café downtown. We talked
+                  for hours, losing track of time as we shared stories and
+                  discovered how much we had in common.
+                </p>
+              </div>
+
+              <div class="timeline-item animate-on-scroll">
+                <h3 class="timeline-title">The Proposal</h3>
+                <p class="timeline-text">
+                  On a crisp autumn evening at sunset, overlooking the city from
+                  our favorite hiking spot, Michael got down on one knee and
+                  asked Sarah to spend forever with him. Through happy tears,
+                  she said yes!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Schedule Section -->
+      <section id="schedule" class="section bg-pink-light">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Wedding Schedule</h2>
+
+          <div class="schedule-grid">
+            <div class="schedule-card animate-on-scroll">
+              <div class="schedule-header">
+                <div class="schedule-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <h3 class="schedule-title">Poruwa Ceremony</h3>
+              </div>
+
+              <ul class="schedule-details">
+                <li><i class="fas fa-clock"></i> At 8.46 Am</li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i> Hotel Grand
+                  Guardian(Grand Red Hall)
+                </li>
+                <li class="schedule-note">
+                  Please arrive 15 minutes early to be seated. The ceremony will
+                  begin promptly at 8.30 Am.
+                </li>
+              </ul>
+            </div>
+
+            <div class="schedule-card animate-on-scroll">
+              <div class="schedule-header">
+                <div class="schedule-icon">
+                  <i class="fas fa-glass-cheers"></i>
+                </div>
+                <h3 class="schedule-title">Reception</h3>
+              </div>
+
+              <ul class="schedule-details">
+                <li><i class="fas fa-clock"></i> 8.30 Am - 3:30 PM</li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i> Hotel Grand
+                  Guardian(Grand Red Hall)
+                </li>
+
+                <li>
+                  <i class="fas fa-utensils"></i> Lunch & Dancing: 12:15 PM
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="schedule-footer animate-on-scroll">
+            <p class="schedule-message">We can't wait to celebrate with you!</p>
+            <p class="schedule-dress-code">Dress code: Formal attire</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location Section -->
+      <section id="location" class="section bg-white">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Location</h2>
+
+          <div class="location-grid">
+            <div class="location-map animate-on-scroll">
+              <!-- Replace with actual Google Maps embed code -->
+              <div class="map-placeholder">
+                <img src="hotel.jpg" alt="Map" class="map-image" />
+              </div>
+            </div>
+
+            <div class="location-details animate-on-scroll">
+              <div class="location-card">
+                <h3 class="location-title">
+                  Hotel Grand Guardian(Grand Red Hall)
+                </h3>
+
+                <div class="location-info">
+                  <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>
+                      Malangama, Ratnapura, <br />
+                      Sri Lanka
+                    </p>
+                  </div>
+
+                  <div class="location-item">
+                    <i class="fas fa-phone"></i>
+                    <p>0452 261 600</p>
+                  </div>
+
+                  <div class="location-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>hotelgrandguardian@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="location-section">
+                  <h4 class="location-subtitle">Parking Information</h4>
+                  <p class="location-text">
+                    Complimentary valet parking is available for all wedding
+                    guests.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center the "Get Directions" button -->
+          <div class="text-center" style="margin-top: 2rem">
+            <a
+              href="https://www.google.com/maps/dir//Ratnapura/@6.7428855,80.2970049,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3ae3bc1ce53227ff:0xe79d72258a3c1414!2m2!1d80.3794068!2d6.7428924?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="glow-button"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="section bg-pink-light">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Photo Gallery</h2>
+
+          <div class="gallery-grid">
+            <div class="gallery-item animate-on-scroll" data-index="0">
+              <img
+                src="https://placehold.co/800x600"
+                alt="Sarah and Michael at the beach"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-item animate-on-scroll" data-index="1">
+              <img
+                src="https://placehold.co/800x600"
+                alt="Engagement photo"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-item animate-on-scroll" data-index="2">
+              <img
+                src="https://placehold.co/800x600"
+                alt="First date"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-item animate-on-scroll" data-index="3">
+              <img
+                src="https://placehold.co/800x600"
+                alt="Hiking together"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-item animate-on-scroll" data-index="4">
+              <img
+                src="https://placehold.co/800x600"
+                alt="Holiday celebration"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-item animate-on-scroll" data-index="5">
+              <img
+                src="https://placehold.co/800x600"
+                alt="Proposal moment"
+                class="gallery-image"
+              />
+            </div>
+          </div>
+
+          <!-- Lightbox Modal -->
+          <div id="gallery-modal" class="gallery-modal">
+            <button id="modal-close" class="modal-close">
+              <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-content">
+              <img
+                id="modal-image"
+                src="/placeholder.svg"
+                alt=""
+                class="modal-image"
+              />
+              <div id="modal-caption" class="modal-caption"></div>
+            </div>
+
+            <button id="modal-prev" class="modal-nav modal-prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="modal-next" class="modal-nav modal-next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP Section -->
+      <section id="rsvp" class="section bg-white">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">RSVP</h2>
+
+          <div class="rsvp-card animate-on-scroll">
+            <div id="rsvp-form-container">
+              <form id="rsvp-form" class="rsvp-form">
+                <div class="form-group">
+                  <label for="name" class="form-label">Your Name*</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Enter Your Name"
+                  />
+                  <p class="form-error" id="name-error"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address*</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="Enter Your Email"
+                  />
+                  <p class="form-error" id="email-error"></p>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="attending" class="form-label"
+                      >Will You Attend?</label
+                    >
+                    <select id="attending" name="attending" class="form-select">
+                      <option value="yes">Joyfully Accept</option>
+                      <option value="no">Regretfully Decline</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="guests" class="form-label"
+                      >Number of Guests</label
+                    >
+                    <select id="guests" name="guests" class="form-select">
+                      <option value="0">Just Me</option>
+                      <option value="1">Me + 1 Guest</option>
+                      <option value="2">Me + 2 Guests</option>
+                      <option value="3">Me + 3 Guests</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label"
+                    >Message for the Couple (Optional)</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="form-textarea"
+                    placeholder="Share your well wishes or any dietary restrictions..."
+                  ></textarea>
+                </div>
+
+                <div class="form-submit">
+                  <button type="button" id="submit-btn" class="glow-button">
+                    Send RSVP
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div id="rsvp-success" class="rsvp-success hidden">
+              <div class="success-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <h3 class="success-title">Thank You!</h3>
+              <p class="success-message">
+                Your RSVP has been submitted successfully. We look forward to
+                celebrating with you!
+              </p>
+            </div>
+          </div>
+
+          <div class="rsvp-footer animate-on-scroll">
+            <p>
+              If you have any questions, please contact us at
+              <a href="mailto:hasiniaamarasingha@gmail.com" class="email-link">
+                hasiniaamarasingha@gmail.com
+              </a>
+              or call us at
+              <a href="tel:+94 71 112 1188" class="phone-link"
+                >Hasini - +94 71 112 1188</a
+              >
+              or
+              <a href="tel:+94 71 461 9776" class="phone-link"
+                >Lakmal - +94 71 461 9776</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="footer-text">
+          Lakmal & Hasini © <span id="current-year"></span>
+        </p>
+      </footer>
+    </main>
+
+    <script src="Script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+
+      document
+        .getElementById("submit-btn")
+        .addEventListener("click", function () {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const attending = document.getElementById("attending").value;
+          const guests = document.getElementById("guests").value;
+          const message = document.getElementById("message").value;
+
+          const templateParams = {
+            name: name,
+            email: email,
+            attending: attending,
+            guests: guests,
+            message: message,
+          };
+
+          emailjs
+            .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+            .then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                document
+                  .getElementById("rsvp-success")
+                  .classList.remove("hidden");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+        });
+
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      mobileToggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+
+      // Music toggle functionality
+      const musicToggle = document.getElementById("music-toggle");
+      const backgroundMusic = document.getElementById("background-music");
+
+      musicToggle.addEventListener("click", () => {
+        if (backgroundMusic.paused) {
+          backgroundMusic.play();
+          musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+          backgroundMusic.pause();
+          musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+        }
+      });
+    </script>
+  </body>
+</html>
