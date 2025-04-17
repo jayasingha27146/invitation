@@ -516,42 +516,9 @@
     </main>
 
     <script src="Script.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- Remove the old EmailJS script and implementation -->
     <script>
-      emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
-
-      document
-        .getElementById("submit-btn")
-        .addEventListener("click", function () {
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const attending = document.getElementById("attending").value;
-          const guests = document.getElementById("guests").value;
-          const message = document.getElementById("message").value;
-
-          const templateParams = {
-            name: name,
-            email: email,
-            attending: attending,
-            guests: guests,
-            message: message,
-          };
-
-          emailjs
-            .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
-            .then(
-              function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-                document
-                  .getElementById("rsvp-success")
-                  .classList.remove("hidden");
-              },
-              function (error) {
-                console.log("FAILED...", error);
-              }
-            );
-        });
-
+      // Existing mobile toggle code
       const mobileToggle = document.getElementById("mobile-toggle");
       const mobileNav = document.getElementById("mobile-nav");
 
