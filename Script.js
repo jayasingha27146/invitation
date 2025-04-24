@@ -253,18 +253,15 @@ function initGallery() {
 
   let currentIndex = 0;
 
-  // Image data
-  const images = [
-    {
-      src: "https://placehold.co/800x600",
-      alt: "Lakmal & Hasini at the beach",
-    },
-    { src: "https://placehold.co/800x600", alt: "Engagement photo" },
-    { src: "https://placehold.co/800x600", alt: "First date" },
-    { src: "https://placehold.co/800x600", alt: "Hiking together" },
-    { src: "https://placehold.co/800x600", alt: "Holiday celebration" },
-    { src: "https://placehold.co/800x600", alt: "Proposal moment" },
-  ];
+  // Get image data dynamically from the gallery items
+  const images = [];
+  galleryItems.forEach((item) => {
+    const img = item.querySelector("img");
+    images.push({
+      src: img.getAttribute("src"),
+      alt: img.getAttribute("alt"),
+    });
+  });
 
   // Open modal with clicked image
   galleryItems.forEach((item, index) => {
@@ -321,9 +318,12 @@ function initGallery() {
   }
 
   function updateModalContent() {
-    modalImage.src = images[currentIndex].src;
-    modalImage.alt = images[currentIndex].alt;
-    modalCaption.textContent = images[currentIndex].alt;
+    // Make sure we have valid image data
+    if (images[currentIndex]) {
+      modalImage.src = images[currentIndex].src;
+      modalImage.alt = images[currentIndex].alt;
+      modalCaption.textContent = images[currentIndex].alt;
+    }
   }
 }
 
@@ -401,7 +401,7 @@ function initRsvpForm() {
   attendingSelect.addEventListener("change", function () {
     guestsSelect.disabled = this.value === "no";
     if (this.value === "no") {
-      guestsSelect.value = "0";
+      guestsSelect.value = "1";
     }
   });
 

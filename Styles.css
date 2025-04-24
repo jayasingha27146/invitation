@@ -253,8 +253,8 @@ nav.scrolled {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(249, 213, 229, 0.8),
-    rgba(238, 172, 153, 0.8)
+    rgba(249, 213, 229, 0.7),
+    rgba(238, 172, 153, 0.7)
   );
 }
 
